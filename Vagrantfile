@@ -69,5 +69,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get install openjdk-8-jdk -y
     wget https://github.com/BuoyantIO/linkerd/releases/download/0.8.2/linkerd-0.8.2.tgz
     tar -xzf linkerd-0.8.2.tgz
+    wget -O zipkin.jar 'https://search.maven.org/remote_content?g=io.zipkin.java&a=zipkin-server&v=LATEST&c=exec'
   SHELL
+
 end
