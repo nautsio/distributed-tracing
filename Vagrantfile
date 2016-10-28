@@ -64,8 +64,10 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     sudo add-apt-repository ppa:webupd8team/java -y
+    sudo add-apt-repository ppa:openjdk-r/ppa
     sudo apt-get update
     sudo apt-get install openjdk-8-jdk -y
     wget https://github.com/BuoyantIO/linkerd/releases/download/0.8.2/linkerd-0.8.2.tgz
+    tar -xzf linkerd-0.8.2.tgz
   SHELL
 end
